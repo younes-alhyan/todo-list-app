@@ -32,4 +32,12 @@ The classic todo app with a few twists! This app includes a dark/light theme tog
 
 ![INTERMEDIATE](https://img.shields.io/badge/Difficulty-INTERMEDIATE-yellow)
 
-**Level:** 3 / 5
+## 🏅 Level
+
+<span>
+<img src="https://img.shields.io/badge/-a?style=for-the-badge&logo=sparkpost&logoColor=red&color=0D1117" alt="GitHub" width="100"></img>
+<img src="https://img.shields.io/badge/-a?style=for-the-badge&logo=sparkpost&logoColor=red&color=0D1117" alt="GitHub" width="100"></img>
+<img src="https://img.shields.io/badge/-a?style=for-the-badge&logo=sparkpost&logoColor=red&color=0D1117" alt="GitHub" width="100"></img>
+<img src="https://img.shields.io/badge/-a?style=for-the-badge&logo=sparkpost&logoColor=grey&color=0D1117" alt="GitHub" width="100"></img>
+<img src="https://img.shields.io/badge/-a?style=for-the-badge&logo=sparkpost&logoColor=grey&color=0D1117" alt="GitHub" width="100"></img>
+</span>
