@@ -1,0 +1,287 @@
+  @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+  :root {
+    --backgroundColor: hsl(235, 21%, 11%);
+    --containerColor: hsl(235, 24%, 19%);
+    --textColor: hsl(234, 39%, 85%);
+    --buttonsHoverColor: hsl(236, 33%, 92%);
+    --buttonsColor: hsl(234, 11%, 52%);
+    --completedColor: hsl(233, 14%, 35%);
+    --bordersColor: hsl(237, 14%, 26%);
+    --bright-blue: hsl(220, 98%, 61%);
+    --desktop-banner: url("images/bg-desktop-dark.jpg");
+    --mobile-banner: url("images/bg-mobile-dark.jpg");
+    --linear-background: linear-gradient(
+      to right,
+      hsl(192, 100%, 67%),
+      hsl(280, 87%, 65%)
+    );
+  }
+
+  * {
+    box-sizing: border-box;
+    font-family: "Josefin Sans";
+    transition: 0.1s;
+  }
+
+  .white-mode {
+    --backgroundColor: hsl(236, 33%, 92%);
+    --containerColor: hsl(0, 0%, 98%);
+    --textColor: hsl(235, 19%, 35%);
+    --buttonsHoverColor: hsl(235, 19%, 35%);
+    --bordersColor: hsl(233, 11%, 84%);
+    --buttonsColor: hsl(236, 9%, 61%);
+    --completedColor: hsl(233, 11%, 84%);
+    --desktop-banner: url("images/bg-desktop-light.jpg");
+    --mobile-banner: url("images/bg-mobile-light.jpg");
+  }
+
+  body {
+    margin: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: var(--backgroundColor);
+    min-height: 100vh;
+  }
+
+  .banner {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 300px;
+    background: var(--desktop-banner) no-repeat;
+    background-size: cover;
+  }
+
+  @media (max-width: 375px) {
+    .banner {
+      height: 200px;
+      background: var(--mobile-banner);
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    height: fit-content;
+    margin-top: 75px;
+  }
+
+  .title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .title h1 {
+    color: white;
+    letter-spacing: 10px;
+  }
+
+  .theme-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .todo-input-container {
+    width: 100%;
+    background-color: var(--containerColor);
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  /* Base styles for the custom checkbox */
+  .costum-checkbox {
+    height: 20px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+    cursor: pointer;
+    position: relative; /* Ensure position relative for pseudo-elements */
+    background-image: var(--linear-background);
+  }
+
+  .costum-checkbox::after {
+    content: "";
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    background-color: var(--containerColor);
+    border: 1px solid var(--bordersColor);
+  }
+  .costum-checkbox:hover::after {
+    border: none;
+  }
+  .todo-input-container input[type="checkbox"]:checked + .costum-checkbox::after {
+    display: none;
+  }
+
+  #todo-input {
+    outline: none;
+    background: none;
+    border: none;
+    color: var(--textColor);
+    font-size: 18px;
+    height: 40px;
+    flex-grow: 1;
+    caret-color: var(--bright-blue);
+  }
+
+  .todos {
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    background-color: var(--containerColor);
+    max-height: calc(50px * 6);
+    min-height: 35vh;
+    overflow: scroll;
+  }
+
+  .todo {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--bordersColor);
+    cursor: pointer;
+  }
+  .todo.dragging {
+    opacity: 0.5;
+  }
+  .todo input[type="checkbox"]:checked + .costum-checkbox::after {
+    display: none;
+  }
+
+  .todo-label {
+    margin: 10px 0;
+    color: var(--textColor);
+    font-size: 16px;
+  }
+
+  .todo-label.completed {
+    color: var(--completedColor);
+    text-decoration: line-through;
+  }
+
+  .cross {
+    position: absolute;
+    right: 5px;
+    height: 100%;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .cross svg {
+    display: none;
+  }
+
+  .todo:hover .cross svg {
+    display: block;
+  }
+
+  .menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 0 0 5px 5px;
+    background-color: var(--containerColor);
+  }
+
+  .items {
+    color: var(--buttonsColor);
+    font-size: small;
+    margin: 0;
+  }
+
+  .filter {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+  }
+
+  .option,
+  .clear {
+    border: none;
+    background: none;
+    color: var(--buttonsColor);
+    cursor: pointer;
+  }
+
+  .option {
+    font-weight: 800;
+  }
+
+  .option.active {
+    color: var(--bright-blue);
+  }
+
+  .option:hover,
+  .clear:hover {
+    color: var(--buttonsHoverColor);
+  }
+
+  .option.active:hover {
+    color: var(--bright-blue);
+  }
+
+  .filter.mobile {
+    display: none;
+  }
+  .drag-text{
+    color: var(--buttonsColor);
+    font-size: 14px;
+    margin-top: 50px;
+  }
+
+  @media (max-width: 550px) {
+    .container {
+      margin-top: 20px;
+      width: 90%;
+    }
+
+    .filter {
+      display: none;
+    }
+
+    .filter.mobile {
+      margin-top: 15px;
+      display: flex;
+      background-color: var(--containerColor);
+      width: 100%;
+      padding: 15px 0;
+      border-radius: 5px;
+    }
+
+    .costum-checkbox {
+      margin-right: 10px;
+    }
+  }
