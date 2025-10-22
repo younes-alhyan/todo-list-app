@@ -34,20 +34,8 @@ The classic todo app with a few twists! This app includes a dark/light theme tog
 
 ## 🏅 Level
 
-<span>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100" height="100" fill="gold">
-  <polygon points="12 2 15 9 22 9 17 14 18.5 21 12 17 5.5 21 7 14 2 9 9 9"/>
-</svg>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100" height="100" fill="gold">
-  <polygon points="12 2 15 9 22 9 17 14 18.5 21 12 17 5.5 21 7 14 2 9 9 9"/>
-</svg>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100" height="100" fill="gold">
-  <polygon points="12 2 15 9 22 9 17 14 18.5 21 12 17 5.5 21 7 14 2 9 9 9"/>
-</svg>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100" height="100" fill="none" stroke="gold" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter">
-  <polygon points="12 2 15 9 22 9 17 14 18.5 21 12 17 5.5 21 7 14 2 9 9 9"/>
-</svg>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100" height="100" fill="none" stroke="gold" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter">
-  <polygon points="12 2 15 9 22 9 17 14 18.5 21 12 17 5.5 21 7 14 2 9 9 9"/>
-</svg>
-</span>
+![gold star](https://younes-alhyan.github.io/frontend-mentor/assets/star-filled.svg)
+![gold star](https://younes-alhyan.github.io/frontend-mentor/assets/star-filled.svg)
+![gold star](https://younes-alhyan.github.io/frontend-mentor/assets/star-filled.svg)
+![empty star](https://younes-alhyan.github.io/frontend-mentor/assets/star-outline.svg)
+![empty star](https://younes-alhyan.github.io/frontend-mentor/assets/star-outline.svg)
